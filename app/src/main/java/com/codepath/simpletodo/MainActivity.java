@@ -12,6 +12,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import org.apache.commons.io.FileUtils;
+import org.json.JSONArray;
 
 import java.io.File;
 import java.io.FileReader;
@@ -26,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<String> items;
     ArrayAdapter<String> itemsAdapter;
     ListView lvItems;
+
+    JSONArray itemsJSON;
 
     int selectTextPos;
 
@@ -43,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void populateArrayItems() {
         items = new ArrayList<>();
+
+        itemsJSON = new JSONArray();
 
         readItems();
 
