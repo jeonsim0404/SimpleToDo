@@ -97,10 +97,6 @@ public class MainActivity extends AppCompatActivity {
         } catch (IOException e) {
             items = new ArrayList<String>();
         }
-
-            Toast.makeText(this, "Read Text", Toast.LENGTH_LONG).show();
-
-
     }
 
     private void writeItems() {
